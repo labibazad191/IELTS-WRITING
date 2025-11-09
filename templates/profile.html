@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Sci-Fi Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/home-sci-fi.css' %}">
+
+    <title>Profile - IELTS Command Center</title>
+</head>
+
+<body>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark p-3" id="headerNav">
+
+        <div class="container-fluid">
+            <a class="navbar-brand d-block d-lg-none" href="#">
+                <img src="{% static 'img/Colorful-removebg-preview.png'%}" height="80" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+
+                <ul class="navbar-nav mx-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" aria-current="page" href="/home">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="/history">
+                            <i class="fas fa-history"></i> History
+                        </a>
+                    </li>
+                    <li class="nav-item d-none d-lg-block">
+                        <a class="navbar-brand mx-2" href="#">
+                            <img src="{% static 'img/Colorful-removebg-preview.png'%}" height="100"  width="100"/>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 active" href="/profile">
+                            <i class="fas fa-user"></i> Profile
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="{% url 'logout' %}">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container mt-5">
+        <div class="glass-container fade-in">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="text-center mb-4">Change Password</h1>
+                    <form method="post" action="{% url 'change_password' %}">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="old_password">Enter Old Password:</label>
+                            <input type="password" id="old_password" name="old_password" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="new_password1">Enter New Password:</label>
+                            <input type="password" id="new_password1" name="new_password1" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="new_password2">Confirm New Password:</label>
+                            <input type="password" id="new_password2" name="new_password2" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Change Password</button>
+                    </form>
+
+                    <h1 class="text-center mb-4 mt-5">Edit Profile</h1>
+                    <form method="post" action="{% url 'edit_profile' %}">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="first_name">First Name:</label>
+                            <input type="text" id="first_name" name="first_name" value="{{ user.first_name }}" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="last_name">Last Name:</label>
+                            <input type="text" id="last_name" name="last_name" value="{{ user.last_name }}" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Save Changes</button>
+                    </form>
+                </div>
+                <div class="col-md-6 mt-3 mt-md-0 d-flex align-items-center justify-content-center">
+                    <div class="card">
+                        <h1 class="text-center">Profile Info</h1>
+                        <h3>First Name: {{ user.first_name }}</h3>
+                        <h3>Last Name: {{ user.last_name }}</h3>
+                        <h3>Email: {{ user.email }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="fixed-bottom">
+        <div class="telemetry">
+            System Status: Online | Coordinates: 23.8103°N 90.4125°E | Mission Time: <span id="mission-time">00:00:00</span>
+        </div>
+        <div class="text-center py-2">
+            Copyright © 2025. All rights reserved.
+        </div>
+    </footer>
+
+    <style>
+        .card {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 191, 255, 0.3);
+            border-radius: 20px;
+            box-shadow: 0 0 50px rgba(0, 191, 255, 0.2), inset 0 0 50px rgba(0, 191, 255, 0.1);
+            padding: 40px;
+            color: #e0f7ff;
+            text-shadow: 0 0 10px #00bfff;
+        }
+
+        .card h1 {
+            font-family: 'Orbitron', sans-serif;
+            color: #e0f7ff;
+            text-shadow: 0 0 10px #00bfff;
+            font-size: 2rem;
+        }
+
+        .card h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: #e0f7ff;
+            text-shadow: 0 0 10px #00bfff;
+            font-size: 1.2rem;
+        }
+
+        @media screen and (min-width:992px) {
+            .nav-item {
+                line-height: 80px;
+            }
+        }
+    </style>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Particles.js -->
+    <script src="{% static 'js/particles.js' %}"></script>
+
+    <!-- Custom JS -->
+    <script src="{% static 'js/animations.js' %}"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Initialize particles
+        particlesJS.load('particles-js', '{% static "js/particles.js" %}', function() {
+            console.log('particles.js loaded - callback');
+        });
+
+        // Mission time counter
+        function updateMissionTime() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('mission-time').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateMissionTime, 1000);
+        updateMissionTime();
+
+        // Cursor trail effect
+        document.addEventListener('DOMContentLoaded', function() {
+            const cursorTrail = document.createElement('div');
+            cursorTrail.classList.add('cursor-trail');
+            document.body.appendChild(cursorTrail);
+
+            document.addEventListener('mousemove', function(e) {
+                cursorTrail.style.left = e.clientX - 10 + 'px';
+                cursorTrail.style.top = e.clientY - 10 + 'px';
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,285 @@
+/* Card Layouts and Components */
+
+.section {
+  padding: 100px 0;
+  position: relative;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.section-header h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  color: #00ffff;
+  text-shadow: 0 0 15px #00ffff;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #00ffff, #0080ff, #8000ff, #ff0080, #00ffff);
+  background-size: 400% 400%;
+  animation: gradientShift 3s ease infinite;
+  border-radius: 2px;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  max-width: 700px;
+  margin: 0 auto;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+}
+
+/* Service Cards */
+.service-card {
+  text-align: center;
+  padding: 50px 40px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #00ffff, #0080ff, #8000ff, #ff0080, #00ffff);
+  background-size: 400% 400%;
+  animation: gradientShift 4s ease infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card i {
+  font-size: 4rem;
+  color: #00ffff;
+  margin-bottom: 25px;
+  transition: all 0.4s ease;
+  text-shadow: 0 0 15px #00ffff;
+}
+
+.service-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+  font-weight: 600;
+}
+
+.service-card p {
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
+.service-card:hover {
+  transform: translateY(-20px) scale(1.05);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.4), inset 0 0 40px rgba(0, 255, 255, 0.1);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card:hover i {
+  transform: scale(1.2) rotate(5deg);
+  color: #00ffff;
+  text-shadow: 0 0 25px #00ffff, 0 0 50px #00ffff;
+}
+
+/* Feature Cards */
+.feature-card {
+  padding: 30px;
+  text-align: center;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.feature-card .icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: white;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover .icon {
+  transform: rotate(360deg);
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+  padding: 30px;
+  text-align: center;
+  border-radius: 15px;
+  margin: 0 15px;
+}
+
+.testimonial-card .quote {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.testimonial-card .quote::before,
+.testimonial-card .quote::after {
+  content: '"';
+  font-size: 3rem;
+  color: #667eea;
+  position: absolute;
+  top: -10px;
+}
+
+.testimonial-card .quote::before {
+  left: -20px;
+}
+
+.testimonial-card .quote::after {
+  right: -20px;
+}
+
+.testimonial-card .author {
+  font-weight: 600;
+  color: #667eea;
+}
+
+.testimonial-card .role {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Team Cards */
+.team-card {
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.team-card .image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 20px;
+  transition: all 0.3s ease;
+}
+
+.team-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.team-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(102, 126, 234, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.team-card .overlay i {
+  color: white;
+  font-size: 2rem;
+}
+
+.team-card:hover .image-container {
+  transform: scale(1.1);
+}
+
+.team-card:hover .overlay {
+  opacity: 1;
+}
+
+.team-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.team-card p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Progress Bars */
+.progress-bar {
+  height: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 4px;
+  transition: width 1s ease;
+}
+
+/* Stats Cards */
+.stats-card {
+  text-align: center;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.stats-card .number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #667eea;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.stats-card .label {
+  font-size: 1.1rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive Cards */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .service-card,
+  .feature-card,
+  .testimonial-card,
+  .team-card,
+  .stats-card {
+    margin-bottom: 30px;
+  }
+
+  .testimonial-card {
+    margin: 0 10px 30px;
+  }
+}

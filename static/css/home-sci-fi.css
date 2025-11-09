@@ -1,0 +1,465 @@
+/* Futuristic/Sci-Fi Styles for home.html */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap');
+
+/* Background & Layout */
+body {
+  background: linear-gradient(135deg, #020b24 0%, #001030 100%);
+  font-family: 'Exo 2', sans-serif;
+  color: #e0f7ff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(0, 191, 255, 0.05) 0%, rgba(0, 16, 48, 0.9) 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Particles Container */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Glassmorphism Container */
+.glass-container {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 191, 255, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(0, 191, 255, 0.2), inset 0 0 50px rgba(0, 191, 255, 0.1);
+  padding: 40px;
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00bfff, #16f2ff, #00bfff);
+  animation: glowShift 3s ease-in-out infinite;
+}
+
+@keyframes glowShift {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 191, 255, 0.5);
+  box-shadow: 0 0 30px rgba(0, 191, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.navbar-brand img {
+  filter: drop-shadow(0 0 10px #00bfff);
+  animation: logoPulse 3s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+  0%, 100% { filter: drop-shadow(0 0 10px #00bfff); }
+  50% { filter: drop-shadow(0 0 20px #00bfff); }
+}
+
+.nav-link {
+  color: #e0f7ff !important;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00bfff, #16f2ff);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #00bfff !important;
+  text-shadow: 0 0 10px #00bfff;
+}
+
+/* Question & Answer Panel */
+.form-control {
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(0, 191, 255, 0.3);
+  border-radius: 10px;
+  color: #e0f7ff;
+  font-family: 'Exo 2', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #00bfff;
+  box-shadow: 0 0 15px #00bfff;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.form-control::placeholder {
+  color: rgba(224, 247, 255, 0.5);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #00bfff 0%, #007bff 100%);
+  border: none;
+  color: #000;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 40px rgba(0, 191, 255, 0.8);
+  transform: scale(1.05);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+/* Timer Section */
+.timer-container {
+  position: relative;
+  display: inline-block;
+}
+
+#timer {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #00bfff;
+  text-shadow: 0 0 20px #00bfff;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #00bfff;
+  box-shadow: 0 0 30px rgba(0, 191, 255, 0.5), inset 0 0 30px rgba(0, 191, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+#timer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #00bfff 0%, transparent 0%);
+  animation: timerProgress 2400s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes timerProgress {
+  0% { background: conic-gradient(from 0deg, #00bfff 0%, transparent 0%); }
+  100% { background: conic-gradient(from 0deg, #00bfff 100%, transparent 100%); }
+}
+
+#start-timer-btn {
+  background: linear-gradient(135deg, #00bfff 0%, #16f2ff 100%);
+  border: none;
+  color: #000;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 15px 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+  transition: all 0.3s ease;
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 191, 255, 0.5); }
+  50% { box-shadow: 0 0 40px rgba(0, 191, 255, 0.8); }
+}
+
+#start-timer-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(0, 191, 255, 0.8);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif;
+  color: #e0f7ff;
+  text-shadow: 0 0 10px #00bfff;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-family: 'Exo 2', sans-serif;
+  color: #b0b0b0;
+}
+
+/* Results Display */
+.success {
+  color: #00ff00;
+  font-weight: bold;
+}
+
+.error {
+  color: #ff4444;
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(0, 191, 255, 0.5);
+  box-shadow: 0 0 30px rgba(0, 191, 255, 0.3);
+  color: #e0f7ff;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #00bfff, transparent);
+  opacity: 0.5;
+}
+
+.telemetry {
+  font-size: 14px;
+  color: #00bfff;
+  text-shadow: 0 0 5px #00bfff;
+  margin-bottom: 10px;
+}
+
+/* Cursor Trail */
+.cursor-trail {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #00bfff 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid #00bfff;
+  white-space: nowrap;
+  animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #00bfff; }
+}
+
+/* Holo-Table Styles */
+.holo-table {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+}
+
+.holo-table th {
+  background: rgba(0, 191, 255, 0.2);
+  color: #e8faff;
+  padding: 15px;
+  text-align: left;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(0, 191, 255, 0.5);
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+}
+
+.holo-table td {
+  padding: 15px;
+  color: #e8faff;
+  border-bottom: 1px solid rgba(0, 191, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.holo-table tr:hover {
+  background: rgba(0, 191, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.5) inset;
+  transform: translateY(-2px);
+}
+
+/* Mark Badge */
+.mark-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  background: rgba(0, 191, 255, 0.2);
+  border: 1px solid #00d4ff;
+  border-radius: 5px;
+  color: #e8faff;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  text-shadow: 0 0 5px #00d4ff;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(0, 191, 255, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(0, 191, 255, 0.8); }
+}
+
+/* Hologram Title */
+.hologram-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #e0f7ff;
+  text-shadow: 0 0 20px #00bfff;
+  animation: hologramFlicker 2s ease-in-out infinite;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@keyframes hologramFlicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.subtitle {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Pulse Active Nav Link */
+.pulse-active {
+  animation: navPulse 2s ease-in-out infinite;
+}
+
+@keyframes navPulse {
+  0%, 100% { text-shadow: 0 0 10px #00bfff; }
+  50% { text-shadow: 0 0 20px #00bfff; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .glass-container {
+    padding: 20px;
+  }
+
+  #timer {
+    width: 150px;
+    height: 150px;
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .hologram-title {
+    font-size: 2.5rem;
+  }
+
+  .holo-table th,
+  .holo-table td {
+    padding: 10px;
+  }
+}

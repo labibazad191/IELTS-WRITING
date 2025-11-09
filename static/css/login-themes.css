@@ -1,0 +1,183 @@
+/* Futuristic / Sci-Fi Login Theme */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+  color: #00ffff;
+  overflow: hidden;
+  height: 100vh;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.command-sentence {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+  border: 1px solid #00ffff;
+  padding: 1rem;
+  border-radius: 5px;
+  background: rgba(0, 255, 255, 0.1);
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid #00ffff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-outline {
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #00ffff;
+  color: #00ffff;
+  padding: 0.75rem;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: 0 0 10px #00ffff;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.form-label {
+  color: #00ffff;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #00ffff, #0080ff);
+  border: none;
+  color: #000;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 15px #00ffff;
+  transform: translateY(-2px);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.link-danger {
+  color: #ff4444;
+  text-decoration: none;
+}
+
+.link-danger:hover {
+  text-decoration: underline;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+}
+
+.form-check-input {
+  margin-right: 0.5rem;
+}
+
+.text-body {
+  color: #00ffff;
+}
+
+.text-body:hover {
+  text-decoration: underline;
+}
+
+/* Hide Bootstrap styles */
+.alert {
+  display: none; /* Temporarily hide messages for theme */
+}
+
+/* Input with icon styles */
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #00ffff;
+  font-size: 1.2rem;
+}
+
+.input-with-icon .form-control {
+  padding-left: 2.5rem;
+}
+
+/* Button active state for glow and expand */
+.btn-primary:active {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+}
