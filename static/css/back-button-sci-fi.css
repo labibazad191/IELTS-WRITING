@@ -1,0 +1,246 @@
+/* Sci-Fi Back Button Styles */
+
+.sci-fi-back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(0, 191, 255, 0.5);
+  box-shadow: 0 0 30px rgba(0, 191, 255, 0.3), inset 0 0 30px rgba(0, 191, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.sci-fi-back-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00bfff, #16f2ff, #00bfff);
+  animation: glowShift 3s ease-in-out infinite;
+}
+
+.sci-fi-back-button:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 0 50px rgba(0, 191, 255, 0.6), inset 0 0 50px rgba(0, 191, 255, 0.2);
+  border-color: rgba(0, 191, 255, 0.8);
+}
+
+.sci-fi-back-button:hover::before {
+  animation: glowShift 1s ease-in-out infinite;
+}
+
+.sci-fi-back-button .back-icon {
+  font-size: 24px;
+  color: #00bfff;
+  text-shadow: 0 0 10px #00bfff;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.sci-fi-back-button:hover .back-icon {
+  color: #16f2ff;
+  text-shadow: 0 0 15px #16f2ff;
+  transform: translateX(-2px);
+}
+
+/* Floating particles around button */
+.sci-fi-back-button::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 8px;
+  height: 8px;
+  background: #00bfff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00bfff;
+  animation: floatParticle 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+.sci-fi-back-button:nth-child(1)::after {
+  animation-delay: 0s;
+}
+
+.sci-fi-back-button:nth-child(2)::after {
+  animation-delay: 1s;
+}
+
+.sci-fi-back-button:nth-child(3)::after {
+  animation-delay: 2s;
+}
+
+.sci-fi-back-button:nth-child(4)::after {
+  animation-delay: 3s;
+}
+
+/* Holographic shimmer effect */
+.sci-fi-back-button .hologram-shimmer {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: hologramShimmer 3s ease-in-out infinite;
+  z-index: 3;
+}
+
+@keyframes hologramShimmer {
+  0%, 100% { left: -100%; }
+  50% { left: 100%; }
+}
+
+@keyframes glowShift {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes floatParticle {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-15px) rotate(180deg) scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sci-fi-back-button {
+    width: 50px;
+    height: 50px;
+    top: 15px;
+    left: 15px;
+  }
+
+  .sci-fi-back-button .back-icon {
+    font-size: 20px;
+  }
+}
+
+/* Portal effect for click */
+.sci-fi-back-button.clicked {
+  animation: portalEffect 0.5s ease-out;
+}
+
+@keyframes portalEffect {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 30px rgba(0, 191, 255, 0.3);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 80px rgba(0, 191, 255, 0.8);
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+/* Laser beam effect */
+.sci-fi-back-button.laser-beam::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(0, 191, 255, 0.8), transparent);
+  transform: translateY(-50%);
+  animation: laserBeam 0.3s ease-out;
+  z-index: 4;
+}
+
+@keyframes laserBeam {
+  0% { width: 0; opacity: 1; }
+  100% { width: 200px; opacity: 0; }
+}
+
+/* Orbiting rings */
+.sci-fi-back-button .orbit-ring {
+  position: absolute;
+  border: 1px solid rgba(0, 191, 255, 0.3);
+  border-radius: 50%;
+  animation: orbit 3s linear infinite;
+}
+
+.sci-fi-back-button .orbit-ring:nth-child(1) {
+  width: 80px;
+  height: 80px;
+  top: -10px;
+  left: -10px;
+  animation-delay: 0s;
+}
+
+.sci-fi-back-button .orbit-ring:nth-child(2) {
+  width: 90px;
+  height: 90px;
+  top: -15px;
+  left: -15px;
+  animation-delay: 1.5s;
+}
+
+@keyframes orbit {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Glitch effect */
+.sci-fi-back-button.glitch {
+  animation: glitch 0.3s ease-in-out;
+}
+
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+/* Dimensional swipe effect */
+.sci-fi-back-button.dimensional-swipe {
+  position: relative;
+  overflow: visible;
+}
+
+.sci-fi-back-button.dimensional-swipe::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(0, 191, 255, 0.1), rgba(22, 242, 255, 0.1));
+  border-radius: 50%;
+  animation: dimensionalSwipe 0.5s ease-out;
+  z-index: 5;
+}
+
+@keyframes dimensionalSwipe {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2) rotate(180deg);
+    opacity: 0;
+  }
+}

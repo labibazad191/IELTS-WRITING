@@ -6,10 +6,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{% static 'css/login-themes.css' %}">
+    <link href="{% static 'css/back-button-sci-fi.css' %}" rel="stylesheet">
     <title>Login - Futuristic Interface</title>
 </head>
 
 <body>
+    <!-- Sci-Fi Back Button -->
+    <button class="sci-fi-back-button" onclick="goBack()" title="Back to Previous Page">
+        <div class="hologram-shimmer"></div>
+        <i class="fas fa-arrow-left back-icon"></i>
+        <div class="orbit-ring"></div>
+        <div class="orbit-ring"></div>
+    </button>
+
     <div id="particles-js"></div>
 
     <div class="login-container">
@@ -50,6 +59,16 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="{% static 'js/particles.js' %}"></script>
     <script src="{% static 'js/animations.js' %}"></script>
+
+    <script>
+        function goBack() {
+            const button = document.querySelector('.sci-fi-back-button');
+            button.classList.add('clicked');
+            setTimeout(() => {
+                window.history.back();
+            }, 300);
+        }
+    </script>
 </body>
 
 </html>

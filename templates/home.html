@@ -16,11 +16,19 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/home-sci-fi.css' %}">
+    <link href="{% static 'css/back-button-sci-fi.css' %}" rel="stylesheet">
 
     <title>Home - IELTS Command Center</title>
 </head>
 
 <body>
+    <!-- Sci-Fi Back Button -->
+    <button class="sci-fi-back-button" onclick="goBack()" title="Back to Previous Page">
+        <div class="hologram-shimmer"></div>
+        <i class="fas fa-arrow-left back-icon"></i>
+        <div class="orbit-ring"></div>
+        <div class="orbit-ring"></div>
+    </button>
 
     <!-- Particles Background -->
     <div id="particles-js"></div>
@@ -40,7 +48,7 @@
 
                 <ul class="navbar-nav mx-auto ">
                     <li class="nav-item">
-                        <a class="nav-link mx-2 active" aria-current="page" href="home">
+                        <a class="nav-link mx-2 active" aria-current="page" href="#">
                             <i class="fas fa-home"></i> Home
                         </a>
                     </li>
@@ -494,6 +502,14 @@
                 cursorTrail.style.top = e.clientY - 10 + 'px';
             });
         });
+
+        function goBack() {
+            const button = document.querySelector('.sci-fi-back-button');
+            button.classList.add('clicked');
+            setTimeout(() => {
+                window.history.back();
+            }, 300);
+        }
     </script>
 </body>
 

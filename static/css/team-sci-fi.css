@@ -1,0 +1,262 @@
+/* Sci-Fi Team Section Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap');
+
+/* Team Section Background */
+#team {
+  background: linear-gradient(135deg, #020b24 0%, #001030 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0;
+}
+
+#team::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(0, 191, 255, 0.05) 0%, rgba(0, 16, 48, 0.9) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Section Header */
+.section-header h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #e0f7ff;
+  text-shadow: 0 0 20px #00bfff;
+  animation: hologramFlicker 2s ease-in-out infinite;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@keyframes hologramFlicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+/* Team Cards */
+.team-card {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 191, 255, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(0, 191, 255, 0.2), inset 0 0 50px rgba(0, 191, 255, 0.1);
+  padding: 30px 20px;
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-align: center;
+  z-index: 1;
+}
+
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00bfff, #16f2ff, #00bfff);
+  animation: glowShift 3s ease-in-out infinite;
+}
+
+@keyframes glowShift {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.team-card:hover {
+  transform: translateY(-10px) rotateX(5deg);
+  box-shadow: 0 20px 80px rgba(0, 191, 255, 0.4), inset 0 0 80px rgba(0, 191, 255, 0.2);
+}
+
+.team-card:hover::before {
+  animation: glowShift 1s ease-in-out infinite;
+}
+
+/* Team Member Images */
+.team-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #00bfff;
+  box-shadow: 0 0 30px rgba(0, 191, 255, 0.5);
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.team-card img::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #00bfff, #16f2ff, #00bfff, #16f2ff);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-card:hover img::before {
+  opacity: 1;
+  animation: rotateGlow 2s linear infinite;
+}
+
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Team Member Names */
+.team-card h5 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 10px #00bfff;
+  margin-bottom: 5px;
+  position: relative;
+  z-index: 2;
+}
+
+.team-card h5::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00bfff, #16f2ff);
+  transition: width 0.3s ease;
+}
+
+.team-card:hover h5::after {
+  width: 100%;
+}
+
+/* Team Member Roles */
+.team-card .text-muted {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1rem;
+  color: #00bfff !important;
+  text-shadow: 0 0 5px #00bfff;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Team Member Descriptions */
+.team-card p {
+  font-family: 'Exo 2', sans-serif;
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  position: relative;
+  z-index: 2;
+}
+
+/* Floating Particles Animation */
+.team-card::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  background: #00bfff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00bfff;
+  animation: floatParticle 3s ease-in-out infinite;
+  z-index: 1;
+}
+
+.team-card:nth-child(2)::after {
+  animation-delay: 1s;
+}
+
+.team-card:nth-child(3)::after {
+  animation-delay: 2s;
+}
+
+.team-card:nth-child(4)::after {
+  animation-delay: 0.5s;
+}
+
+@keyframes floatParticle {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+    opacity: 1;
+  }
+}
+
+/* Connecting Lines */
+.team-cards-container {
+  position: relative;
+}
+
+.team-cards-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #00bfff, transparent);
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.team-cards-container::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, #00bfff, transparent);
+  z-index: 0;
+  opacity: 0.3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .team-card {
+    padding: 20px 15px;
+  }
+
+  .team-card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-card h5 {
+    font-size: 1.3rem;
+  }
+}

@@ -1,11 +1,10 @@
-# Upgrade profile.html to Sci-Fi Theme
+# TODO: Add Team Section to Landing Page
 
-## Tasks
-- [x] Update HTML head: Add sci-fi fonts, home-sci-fi.css, Font Awesome
-- [x] Add particles background div
-- [x] Update navbar: Add icons, match home/history navbar structure
-- [x] Wrap main content in glass-container with fade-in
-- [x] Add fixed footer with telemetry
-- [x] Add necessary scripts: particles.js, animations.js, typewriter, cursor trail
-- [x] Remove conflicting old styles and scripts
-- [x] Test the updated page
+## Steps to Complete
+- [x] Complete the incomplete testimonials section in index.html
+- [x] Add the Team section with team member cards after testimonials
+- [x] Add footer section
+- [x] Add Bootstrap JS and custom scripts for animations and particles
+- [x] Close the HTML document properly with </body> and </html>
+- [x] Test the page to ensure team section is accessible via navigation link
+- [x] Add sci-fi themed back buttons to all pages

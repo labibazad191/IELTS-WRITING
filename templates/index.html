@@ -19,6 +19,7 @@
   <link href="{% static 'css/global.css' %}" rel="stylesheet">
   <link href="{% static 'css/hero.css' %}" rel="stylesheet">
   <link href="{% static 'css/cards.css' %}" rel="stylesheet">
+  <link href="{% static 'css/team-sci-fi.css' %}" rel="stylesheet">
 
   <!-- Particles.js -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
@@ -202,3 +203,92 @@
         <p>Real feedback from IELTS candidates who improved their scores</p>
       </div>
       <div class="row">
+        <!-- Placeholder for testimonials -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Meet Our Team</h2>
+        <p>The experts behind IELTS Seekers</p>
+      </div>
+      <div class="row team-cards-container">
+        <div class="col-lg-6 col-md-6 animate-on-scroll">
+          <div class="team-card">
+            <img src="{% static 'img/labib1.png' %}" alt="Labib Azad">
+            <h5><a href="https://labibazad.vercel.app" target="_blank">Labib Azad</a></h5>
+            <p class="text-muted">Machine Learning Engineer & Full-Stack Developer</p>
+            <p>Passionate about leveraging AI for educational innovation. With over 4 years of experience in machine learning and web development, Labib specializes in building intelligent systems for IELTS preparation and assessment. He holds expertise in NLP, computer vision, and scalable web applications. Visit his portfolio at <a href="https://labibazad.vercel.app" target="_blank">labibazad.vercel.app</a> to explore his projects and achievements.</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 animate-on-scroll">
+          <div class="team-card">
+            <img src="{% static 'img/nahid1.jpg' %}" alt="Team Member 4">
+            <h5><a href="https://nahid.org/" target="_blank">Nahid Hossain</a></h5>
+            <p class="text-muted">Data Scientist</p>
+            <p>PhD in NLP, focused on educational assessment algorithms.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="text-center py-4">
+        <p>&copy; 2025 IELTS Seekers. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="{% static 'js/animations.js' %}"></script>
+
+  <script>
+    // Counter animation
+    function animateCounters() {
+      const counters = document.querySelectorAll('.counter');
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const increment = target / 200;
+        let current = 0;
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            counter.textContent = target.toLocaleString();
+            clearInterval(timer);
+          } else {
+            counter.textContent = Math.floor(current).toLocaleString();
+          }
+        }, 10);
+      });
+    }
+
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+          if (entry.target.querySelector('.counter')) {
+            animateCounters();
+          }
+        }
+      });
+    });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+    // Particles.js initialization
+    particlesJS.load('particles-js', '{% static "js/particles-config.json" %}', function() {
+      console.log('particles.js loaded');
+    });
+  </script>
+</body>
+</html>

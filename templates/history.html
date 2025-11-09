@@ -6,10 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/home-sci-fi.css' %}">
+    <link href="{% static 'css/back-button-sci-fi.css' %}" rel="stylesheet">
 
     <title>History Logs</title>
-  </head>
+</head>
   <body>
+    <!-- Sci-Fi Back Button -->
+    <button class="sci-fi-back-button" onclick="goBack()" title="Back to Previous Page">
+        <div class="hologram-shimmer"></div>
+        <i class="fas fa-arrow-left back-icon"></i>
+        <div class="orbit-ring"></div>
+        <div class="orbit-ring"></div>
+    </button>
 
     <!-- Particles Container -->
     <div id="particles-js"></div>
@@ -101,6 +109,14 @@
             trail.style.left = e.pageX - 10 + 'px';
             trail.style.top = e.pageY - 10 + 'px';
         });
+
+        function goBack() {
+            const button = document.querySelector('.sci-fi-back-button');
+            button.classList.add('clicked');
+            setTimeout(() => {
+                window.history.back();
+            }, 300);
+        }
     </script>
   </body>
 </html>
