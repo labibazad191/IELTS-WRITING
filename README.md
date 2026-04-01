@@ -201,11 +201,11 @@ We welcome contributions! Please follow these steps:
 ## 👥 Team
 
 - **Nahid Hossain**: Data Scientist specializing in NL
-- Under the supervision
-- Portfolio:https://www.nahid.org/
+   - Under the supervision
+   - Portfolio:https://www.nahid.org/
   
 - **Labib Azad**:Full-Stack Developer
-- Team Lead
+   - Team Lead
   - Portfolio: [labibazad.vercel.app](https://labibazad.vercel.app)
 - **Abdullah Bin Abdul Aziz**
 - **Nazma Akter Anita**
