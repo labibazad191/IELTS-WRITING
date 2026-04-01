@@ -4,7 +4,7 @@
 
 IELTS Seekers is a revolutionary web application that leverages advanced machine learning algorithms to provide instant, comprehensive feedback on IELTS writing tasks. Built with Django and featuring a futuristic sci-fi themed interface, it analyzes essays across all four IELTS writing criteria: Task Achievement, Coherence & Cohesion, Lexical Resource, and Grammatical Range.
 
-## 🌟 Features
+##  Features
 
 - **AI-Powered Evaluation**: Instant scoring and detailed feedback using SVM models trained on 40,000+ writing patterns
 - **Comprehensive Analysis**: Evaluation across all 4 IELTS writing criteria with band score predictions
@@ -14,14 +14,14 @@ IELTS Seekers is a revolutionary web application that leverages advanced machine
 - **Real-time Timer**: 40-minute timer for practice sessions
 - **Responsive Design**: Works seamlessly on desktop and mobile devices
 
-## 🎯 Target Users
+##  Target Users
 
 - IELTS candidates preparing for the writing section
 - English language learners seeking to improve writing skills
 - Students and professionals aiming for higher band scores
 - Educators looking for automated assessment tools
 
-## 📋 Purpose
+##  Purpose
 
 IELTS Seekers aims to revolutionize IELTS preparation by providing:
 - Immediate feedback without waiting for human evaluation
@@ -29,7 +29,7 @@ IELTS Seekers aims to revolutionize IELTS preparation by providing:
 - Practice opportunities with realistic timing constraints
 - Confidence building through consistent improvement tracking
 
-## 🧠 Methodology
+##  Methodology
 
 The application uses Support Vector Machine (SVM) models trained on extensive IELTS writing datasets. The methodology includes:
 
@@ -62,7 +62,7 @@ The application uses Support Vector Machine (SVM) models trained on extensive IE
 - Specialized models for each writing criterion
 - Pre-trained models stored in `Ml_part/` directory
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 ielts/
@@ -97,7 +97,7 @@ ielts/
 └── README.md
 ```
 
-## 🚀 Installation and Setup
+##  Installation and Setup
 
 ### Prerequisites
 - Python 3.11.8
@@ -173,7 +173,7 @@ DATABASE_URL=sqlite:///db.sqlite3
 ### Model Files
 The ML models are pre-trained and located in the `Ml_part/` directory. No additional training is required for basic usage.
 
-## 🤝 Contributing
+##  Contributing
 
 We welcome contributions! Please follow these steps:
 
@@ -211,17 +211,17 @@ We welcome contributions! Please follow these steps:
 - **Nazma Akter Anita**
 - **Nazmus Sakib Nayan**
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - IELTS for providing the evaluation framework
 - Open-source community for the amazing libraries
 - All contributors and beta testers
 
-## 📞 Support
+##  Support
 
 For questions or support:
 - Create an issue on GitHub
