@@ -6,7 +6,7 @@ IELTS Seekers is a revolutionary web application that leverages advanced machine
 
 ## 🌟 Features
 
-- **AI-Powered Evaluation**: Instant scoring and detailed feedback using SVM models trained on 140,000+ writing patterns
+- **AI-Powered Evaluation**: Instant scoring and detailed feedback using SVM models trained on 40,000+ writing patterns
 - **Comprehensive Analysis**: Evaluation across all 4 IELTS writing criteria with band score predictions
 - **User-Friendly Interface**: Sci-fi themed UI with particle effects and smooth animations
 - **Progress Tracking**: History of submissions with marks and detailed feedback
