@@ -33,7 +33,7 @@ IELTS Seekers aims to revolutionize IELTS preparation by providing:
 
 The application uses Support Vector Machine (SVM) models trained on extensive IELTS writing datasets. The methodology includes:
 
-1. **Data Collection**: Analysis of 140,000+ IELTS writing samples
+1. **Data Collection**: Analysis of 40,000+ IELTS writing samples
 2. **Feature Engineering**: TF-IDF vectorization for text processing
 3. **Model Training**: SVM regression and classification models for each criterion
 4. **Evaluation Metrics**: Band score predictions with 95% accuracy rate
