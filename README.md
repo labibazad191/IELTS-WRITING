@@ -200,9 +200,16 @@ We welcome contributions! Please follow these steps:
 
 ## 👥 Team
 
-- **Labib Azad**: Machine Learning Engineer & Full-Stack Developer
+- **Nahid Hossain**: Data Scientist specializing in NL
+- Under the supervision
+- Portfolio:https://www.nahid.org/
+  
+- **Labib Azad**:Full-Stack Developer
+- Team Lead
   - Portfolio: [labibazad.vercel.app](https://labibazad.vercel.app)
-- **Nahid Hossain**: Data Scientist specializing in NLP
+- **Abdullah Bin Abdul Aziz**
+- **Nazma Akter Anita**
+- **Nazmus Sakib Nayan**
 
 ## 📄 License
 
