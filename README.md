@@ -202,6 +202,7 @@ We welcome contributions! Please follow these steps:
 
 - **Nahid Hossain**: Data Scientist specializing in NL
    - Under the supervision
+   - Assistant Professor, Dept. of CSE & UG Program Coordinator (UIU)
    - Portfolio:https://www.nahid.org/
   
 - **Labib Azad**:Full-Stack Developer
@@ -211,9 +212,19 @@ We welcome contributions! Please follow these steps:
 - **Nazma Akter Anita**
 - **Nazmus Sakib Nayan**
 
-##  License
+##  Project View
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+![HomePage](https://github.com/labibazad191/Portfolio--Labib-Azad/blob/73b4cb9c4a585713b5b85d6ca57609ff96759524/public/images/BeFunge93Interpreter/1.png)
+![HomePage](https://github.com/labibazad191/Portfolio--Labib-Azad/blob/73b4cb9c4a585713b5b85d6ca57609ff96759524/public/images/BeFunge93Interpreter/2.png)
+![HomePage](https://github.com/labibazad191/Portfolio--Labib-Azad/blob/73b4cb9c4a585713b5b85d6ca57609ff96759524/public/images/BeFunge93Interpreter/3.png)
+![HomePage](https://github.com/labibazad191/Portfolio--Labib-Azad/blob/73b4cb9c4a585713b5b85d6ca57609ff96759524/public/images/BeFunge93Interpreter/5.png)
+![HomePage](https://github.com/labibazad191/Portfolio--Labib-Azad/blob/73b4cb9c4a585713b5b85d6ca57609ff96759524/public/images/BeFunge93Interpreter/6.png)
+![HomePage](https://github.com/labibazad191/Portfolio--Labib-Azad/blob/73b4cb9c4a585713b5b85d6ca57609ff96759524/public/images/BeFunge93Interpreter/7.png)
+![HomePage](https://github.com/labibazad191/Portfolio--Labib-Azad/blob/73b4cb9c4a585713b5b85d6ca57609ff96759524/public/images/BeFunge93Interpreter/8.png)
+![HomePage](https://github.com/labibazad191/Portfolio--Labib-Azad/blob/73b4cb9c4a585713b5b85d6ca57609ff96759524/public/images/BeFunge93Interpreter/9.jpg)
+![HomePage](https://github.com/labibazad191/Portfolio--Labib-Azad/blob/73b4cb9c4a585713b5b85d6ca57609ff96759524/public/images/BeFunge93Interpreter/10.png)
+
+
 
 ##  Acknowledgments
 
